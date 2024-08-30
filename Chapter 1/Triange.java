@@ -1,30 +1,19 @@
-public class Triangle {
+ public class Triangle {
 
-    public static void main(String[] args) {
-       
-        Triangle triangle = new Triangle();
+  public static void main(String[] args) {
+    int rows = 5, k = 0;
 
-       
-        triangle.printPattern();
+    for (int i = 1; i <= rows; ++i, k = 0) {
+      for (int space = 1; space <= rows - i; ++space) {
+        System.out.print("  ");
+      }
+
+      while (k != 2 * i - 1) {
+        System.out.print("* ");
+        ++k;
+      }
+
+      System.out.println();
     }
-
-   
-    public void printPattern() {
-        
-        System.out.println("T");
-
-        
-        for (int i = 0; i < 4; i++) {
-            for (int j = 0; j <= i; j++) {
-                System.out.print("T");
-            }
-            System.out.println();
-        }
-
-       
-        for (int i = 0; i < 5; i++) {
-            System.out.print("T");
-        }
-        System.out.println();
-    }
+  }
 }
